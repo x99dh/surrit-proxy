@@ -1,0 +1,22 @@
+{
+  // 上游站点和回源 Referer。域名变更时只改这里。
+  "name": "surrit-proxy",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-28",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.01
+    }
+  },
+  "vars": {
+    "TARGET_ORIGIN": "https://surrit.com",
+    "UPSTREAM_REFERER": "https://missav.ai/"
+  }
+}
